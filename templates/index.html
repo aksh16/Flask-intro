@@ -1,0 +1,11 @@
+{% extends "structure.html" %}
+    	{% block title %}{{ super() }}{% endblock %}
+    	{% block main %}{{ super() }}{% endblock %}
+    	{% block link %}<p>Click <a href="/logout">here</a> to logout.</p>{% endblock %}
+    	{% block post %}
+	    	{% for post in posts %}
+	  		<strong>Title:</strong> {{ post.title }} <br>
+	  		<strong>Post:</strong> {{ post.description }} <br>
+			<br>
+		{% endfor %}
+	{% endblock %}
